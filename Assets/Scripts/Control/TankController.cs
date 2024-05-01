@@ -30,19 +30,6 @@ public class TankController : MonoBehaviour
              state = 0;
          }
         
-        // if (Input.GetKey("up"))
-        // {
-        //     state = 1;
-        // }
-        // else if (Input.GetKey("down"))
-        // {
-        //     state = -1;
-        // }
-        // else
-        // {
-        //     state = 0;
-        // }
-        
         horizontalInput = Input.GetAxis("Horizontal");
         
         if (Input.GetButtonDown("Fire1"))

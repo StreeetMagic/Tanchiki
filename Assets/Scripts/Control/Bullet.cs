@@ -17,11 +17,11 @@ public class Bullet : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D other)
     {
-        Debug.Log(other.collider.name);
-        if (other.gameObject.tag == "Player" && other.gameObject.tag == "Enemy")
+        if (other.gameObject.layer == LayerMask.NameToLayer("Enemy") || other.gameObject.layer == LayerMask.NameToLayer("Player"))
         {
             other.gameObject.GetComponent<Health>().SetDamage(damage);
         }
+        
         Destroy(gameObject);
     }
 

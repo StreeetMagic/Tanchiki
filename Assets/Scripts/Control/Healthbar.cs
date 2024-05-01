@@ -1,12 +1,25 @@
+using System;
 using UnityEngine;
 
 public class Healthbar : MonoBehaviour
 {
+    [SerializeField] private Health health;
     [SerializeField] private Transform bar;
     private float scaleX;
     private float posX;
     private float maxHP;
     private float currentHP;
+    
+    private void Start()
+    {
+         Init(health.health);
+    }
+    
+    private void Update()
+    {
+        SetHP(health.health); 
+    }
+
     public void Init(float initHP)
     {
         maxHP = initHP;

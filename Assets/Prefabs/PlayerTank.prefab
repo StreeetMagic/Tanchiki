@@ -48,7 +48,7 @@ GameObject:
   - component: {fileID: 1551738384438312834}
   m_Layer: 6
   m_Name: PlayerTank
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -97,6 +97,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b44843ead824d194baaeb4514a5a342a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 100
 --- !u!114 &4737743503567159166
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -111,6 +112,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 2272975715947636279, guid: 31bdd527f9877444a999650d1c548bf0, type: 3}
   launcher: {fileID: 6123039096424306785}
+  cooldown: 0
+  reload: 5
+  damage: 25
 --- !u!114 &7494315518907025627
 MonoBehaviour:
   m_ObjectHideFlags: 0
