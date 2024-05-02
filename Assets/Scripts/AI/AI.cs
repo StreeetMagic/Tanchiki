@@ -11,6 +11,7 @@ public class AI : MonoBehaviour
     [SerializeField] private AIDestinationSetter aIDestination;
     [SerializeField] private AIPath aIPath;
     [SerializeField] private Fire fire;
+    [SerializeField] private Observer observer;
     
     private int countOfPoints;
     public bool isNear = false;
@@ -35,7 +36,14 @@ public class AI : MonoBehaviour
         }
         else if (state == States.TARGETING)
         {
-            
+            if (observer.LaunchRay())
+            {
+                state = States.ATTACKING;
+            }
+            else
+            {
+                TargetIsMissing(LastPlayerPosition);
+            }
         }
         else if (state == States.ATTACKING)
         {
@@ -45,6 +53,11 @@ public class AI : MonoBehaviour
     
     private void CheckPlayerDestination()
     {
+        if (EnemyGeneral.Instance.GetPlayer() == null)
+        {
+            return;
+        }
+        
         isNear = Vector3.Distance(transform.position, EnemyGeneral.Instance.GetPlayer().position) <= 5;
     }
 

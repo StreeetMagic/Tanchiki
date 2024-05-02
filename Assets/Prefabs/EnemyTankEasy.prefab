@@ -120,7 +120,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 49ef7bfeac3747949a8b17e197986a0b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8128e9fa940d4e746b13f6f0ddcc8170, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -142,7 +142,6 @@ GameObject:
   - component: {fileID: 3241876400768220418}
   - component: {fileID: 6861871882789665860}
   - component: {fileID: 7913292842381410621}
-  - component: {fileID: 496043735693064914}
   - component: {fileID: 4130477485955938214}
   - component: {fileID: 5503522895690391282}
   - component: {fileID: 3813255775876826587}
@@ -151,8 +150,9 @@ GameObject:
   - component: {fileID: 8837373509498249524}
   - component: {fileID: 129302667014870851}
   - component: {fileID: 2258959851391774618}
+  - component: {fileID: 4344416609821983952}
   m_Layer: 8
-  m_Name: EnemyTank
+  m_Name: EnemyTankEasy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -238,21 +238,6 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: -0.018192232}
   m_Size: {x: 0.83411145, y: 0.92965674}
   m_Direction: 0
---- !u!114 &496043735693064914
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7964650729519549000}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2eedc16339d24f341b6ff56a98513d7e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fire: {fileID: 5503522895690391282}
-  observer: {fileID: 4810863553891801138}
-  ai: {fileID: 3813255775876826587}
 --- !u!114 &4130477485955938214
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -299,7 +284,8 @@ MonoBehaviour:
   LastPlayerPosition: {fileID: 0}
   aIDestination: {fileID: 8837373509498249524}
   aIPath: {fileID: 3074484844477182016}
-  fire: {fileID: 0}
+  fire: {fileID: 5503522895690391282}
+  observer: {fileID: 4810863553891801138}
   isNear: 0
 --- !u!114 &4228815950913544736
 MonoBehaviour:
@@ -420,9 +406,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  uniqueID: 268611813617169226
+  uniqueID: 7653156281642855065
   updateError: 1
   checkTime: 0.2
+--- !u!114 &4344416609821983952
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7964650729519549000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2eedc16339d24f341b6ff56a98513d7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fire: {fileID: 5503522895690391282}
+  observer: {fileID: 4810863553891801138}
+  ai: {fileID: 3813255775876826587}
 --- !u!1001 &4755341229005954602
 PrefabInstance:
   m_ObjectHideFlags: 0

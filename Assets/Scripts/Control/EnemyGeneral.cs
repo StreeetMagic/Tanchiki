@@ -25,16 +25,19 @@ public class EnemyGeneral : MonoBehaviour
     {
         squad.Add(tank);
     }
+    
     public void SetPlayerTank(TankController tank)
     {
         player = tank;
     }
+    
     public Transform GetPlayer()
     {
-        
         if (player == null)
         {
             SceneManager.LoadScene("SampleScene");
+            
+            return null;
         }
         
         return player.transform;
