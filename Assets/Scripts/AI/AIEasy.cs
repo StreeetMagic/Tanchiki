@@ -3,7 +3,7 @@
   protected override void Operate()
   {
     CheckPlayerDestination();
-        
+
     if (state == States.STOPING)
     {
       SetTarget();
@@ -14,14 +14,7 @@
     }
     else if (state == States.TARGETING)
     {
-      if (observer.LaunchRay())
-      {
-        state = States.ATTACKING;
-      }
-      else
-      {
-        TargetIsMissing(LastPlayerPosition);
-      }
+      state = States.MOVING;
     }
   }
 }
