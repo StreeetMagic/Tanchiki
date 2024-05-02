@@ -1,17 +1,15 @@
-using System.Collections;
-using System.Collections.Generic;
 using Pathfinding;
 using UnityEngine;
 
-public class AI : MonoBehaviour
+public abstract class AI : MonoBehaviour
 {
     public States state;
     public Transform LastPlayerPosition;
     
     [SerializeField] private AIDestinationSetter aIDestination;
     [SerializeField] private AIPath aIPath;
-    [SerializeField] private Fire fire;
-    [SerializeField] private Observer observer;
+    [SerializeField] protected Fire fire;
+    [SerializeField] protected Observer observer;
     
     private int countOfPoints;
     public bool isNear = false;
@@ -24,34 +22,12 @@ public class AI : MonoBehaviour
 
     void Update()
     {
-        CheckPlayerDestination();
-        
-        if (state == States.STOPING)
-        {
-            SetTarget();
-        }
-        else if (state == States.MOVING)
-        {
-            ReachPoint();
-        }
-        else if (state == States.TARGETING)
-        {
-            if (observer.LaunchRay())
-            {
-                state = States.ATTACKING;
-            }
-            else
-            {
-                TargetIsMissing(LastPlayerPosition);
-            }
-        }
-        else if (state == States.ATTACKING)
-        {
-            fire.Launch();
-        }
+        Operate();
     }
-    
-    private void CheckPlayerDestination()
+
+    protected abstract void Operate();
+
+    protected void CheckPlayerDestination()
     {
         if (EnemyGeneral.Instance.GetPlayer() == null)
         {
@@ -61,7 +37,7 @@ public class AI : MonoBehaviour
         isNear = Vector3.Distance(transform.position, EnemyGeneral.Instance.GetPlayer().position) <= 5;
     }
 
-    private void ReachPoint()
+    protected void ReachPoint()
     {
         if (aIPath.reachedDestination)
         {

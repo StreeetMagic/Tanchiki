@@ -144,13 +144,13 @@ GameObject:
   - component: {fileID: 7913292842381410621}
   - component: {fileID: 4130477485955938214}
   - component: {fileID: 5503522895690391282}
-  - component: {fileID: 3813255775876826587}
   - component: {fileID: 4228815950913544736}
   - component: {fileID: 3074484844477182016}
   - component: {fileID: 8837373509498249524}
   - component: {fileID: 129302667014870851}
   - component: {fileID: 2258959851391774618}
   - component: {fileID: 8703380393285931486}
+  - component: {fileID: 303880249886659731}
   m_Layer: 8
   m_Name: EnemyTankHard
   m_TagString: Untagged
@@ -268,25 +268,6 @@ MonoBehaviour:
   cooldown: 5
   reload: 1
   damage: 25
---- !u!114 &3813255775876826587
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7964650729519549000}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04832adcc4f4177439e3b62e621e4226, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  state: 0
-  LastPlayerPosition: {fileID: 0}
-  aIDestination: {fileID: 8837373509498249524}
-  aIPath: {fileID: 3074484844477182016}
-  fire: {fileID: 5503522895690391282}
-  observer: {fileID: 4810863553891801138}
-  isNear: 0
 --- !u!114 &4228815950913544736
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -406,7 +387,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  uniqueID: 5493623266155264054
+  uniqueID: 235324947731950598
   updateError: 1
   checkTime: 0.2
 --- !u!114 &8703380393285931486
@@ -423,7 +404,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fire: {fileID: 5503522895690391282}
   observer: {fileID: 4810863553891801138}
-  ai: {fileID: 3813255775876826587}
+  ai: {fileID: 303880249886659731}
+--- !u!114 &303880249886659731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7964650729519549000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da1397919a03426fbd8585d8c475b27d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  state: 0
+  LastPlayerPosition: {fileID: 0}
+  aIDestination: {fileID: 8837373509498249524}
+  aIPath: {fileID: 3074484844477182016}
+  fire: {fileID: 5503522895690391282}
+  observer: {fileID: 4810863553891801138}
+  isNear: 0
 --- !u!1001 &4755341229005954602
 PrefabInstance:
   m_ObjectHideFlags: 0
