@@ -2,23 +2,24 @@ using UnityEngine;
 
 public class EnemyTankController : MonoBehaviour
 {
-    [SerializeField]
-    private Fire fire;
-    [SerializeField]
-    private Observer observer;
-    [SerializeField]
-    private AI ai;
+    [SerializeField] private Fire fire;
+    [SerializeField] private Observer observer;
+    [SerializeField] private AI ai;
+    
     private Transform playerPos;
+    
     void Start()
     {
         EnemyGeneral.Instance.SetTankToSquad(this);
     }
 
-
     private void FixedUpdate()
     {
-        if (!ai.isNear) return;
+        if (!ai.isNear) 
+            return;
+        
         playerPos = EnemyGeneral.Instance.GetPlayer();
+        
         if (observer.LaunchRay())
         {
             ai.state = States.TARGETING;
@@ -30,7 +31,6 @@ public class EnemyTankController : MonoBehaviour
             if (observer.LaunchRay())
             {
                 ai.state = States.TARGETING;
-
             }
             else
             {
@@ -38,7 +38,5 @@ public class EnemyTankController : MonoBehaviour
                 ai.TargetIsMissing(playerPos);
             }
         }
-
     }
-
 }

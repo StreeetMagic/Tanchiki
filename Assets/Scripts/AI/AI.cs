@@ -6,13 +6,15 @@ using UnityEngine;
 public class AI : MonoBehaviour
 {
     public States state;
-    [SerializeField]
-    private AIDestinationSetter aIDestination;
-    [SerializeField]
-    private AIPath aIPath;
-    private int countOfPoints;
     public Transform LastPlayerPosition;
+    
+    [SerializeField] private AIDestinationSetter aIDestination;
+    [SerializeField] private AIPath aIPath;
+    [SerializeField] private Fire fire;
+    
+    private int countOfPoints;
     public bool isNear = false;
+    
     void Start()
     {
         state = States.STOPING;
@@ -27,7 +29,6 @@ public class AI : MonoBehaviour
 
             CheckPlayerDestination();
         }
-
         else if (state == States.MOVING)
         {
             CheckPlayerDestination();
@@ -35,9 +36,14 @@ public class AI : MonoBehaviour
         }
         else if (state == States.TARGETING)
         {
-
+            
+        }
+        else if (state == States.ATTACKING)
+        {
+            fire.Launch();
         }
     }
+    
     private void CheckPlayerDestination()
     {
         isNear = Vector3.Distance(transform.position, EnemyGeneral.Instance.GetPlayer().position) <= 5;
@@ -49,8 +55,8 @@ public class AI : MonoBehaviour
         {
             state = States.STOPING;
         }
-
     }
+
     public void SetTarget(Transform pos = null)
     {
         if (pos == null)
@@ -58,11 +64,14 @@ public class AI : MonoBehaviour
             pos = PointManager.Instance.points[Random.Range(0, countOfPoints)];
             Debug.Log(pos);
         }
+        
         Debug.Log(1);
+        
         LastPlayerPosition.position = pos.position;
         aIDestination.target = LastPlayerPosition;
         state = States.MOVING;
     }
+    
     public void TargetIsMissing(Transform lastPos)
     {
         SetTarget(lastPos);

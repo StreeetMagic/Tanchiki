@@ -630,6 +630,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3813255775876826587, guid: a7341de59512e0f469340ba690b6e8dc, type: 3}
+      propertyPath: fire
+      value: 
+      objectReference: {fileID: 1456155518}
+    - target: {fileID: 3813255775876826587, guid: a7341de59512e0f469340ba690b6e8dc, type: 3}
       propertyPath: LastPlayerPosition
       value: 
       objectReference: {fileID: 432495553}
@@ -13528,7 +13532,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   squad: []
-  player: {fileID: 0}
+  player: {fileID: 1170829928}
 --- !u!4 &1054705960
 Transform:
   m_ObjectHideFlags: 0
@@ -13617,6 +13621,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b44843ead824d194baaeb4514a5a342a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1170829928 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3740733648554167720, guid: 8857983060af5c7489661f523e45e200, type: 3}
+  m_PrefabInstance: {fileID: 8251792621433491649}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1c6d2b77443fac4c8d2697827b62ca3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1284411140
 GameObject:
   m_ObjectHideFlags: 0
@@ -13648,6 +13663,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 439873079}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1456155518 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5503522895690391282, guid: a7341de59512e0f469340ba690b6e8dc, type: 3}
+  m_PrefabInstance: {fileID: 435141352}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5c1a4c04199c2b409da47ea623b3252, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1628706194
 GameObject:
   m_ObjectHideFlags: 0
@@ -13840,11 +13866,11 @@ SceneRoots:
   m_Roots:
   - {fileID: 519420032}
   - {fileID: 842099023}
-  - {fileID: 8251792621433491649}
-  - {fileID: 435141352}
   - {fileID: 45417837}
   - {fileID: 756145483}
   - {fileID: 237714672}
   - {fileID: 439873079}
   - {fileID: 1054705960}
   - {fileID: 432495553}
+  - {fileID: 8251792621433491649}
+  - {fileID: 435141352}
