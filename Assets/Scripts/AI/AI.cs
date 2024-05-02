@@ -23,15 +23,14 @@ public class AI : MonoBehaviour
 
     void Update()
     {
+        CheckPlayerDestination();
+        
         if (state == States.STOPING)
         {
             SetTarget();
-
-            CheckPlayerDestination();
         }
         else if (state == States.MOVING)
         {
-            CheckPlayerDestination();
             ReachPoint();
         }
         else if (state == States.TARGETING)
@@ -62,10 +61,7 @@ public class AI : MonoBehaviour
         if (pos == null)
         {
             pos = PointManager.Instance.points[Random.Range(0, countOfPoints)];
-            Debug.Log(pos);
         }
-        
-        Debug.Log(1);
         
         LastPlayerPosition.position = pos.position;
         aIDestination.target = LastPlayerPosition;

@@ -15,27 +15,17 @@ public class EnemyTankController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (!ai.isNear) 
-            return;
-        
-        playerPos = EnemyGeneral.Instance.GetPlayer();
-        
-        if (observer.LaunchRay())
+        if (ai.isNear)
         {
-            ai.state = States.TARGETING;
-            ai.SetTarget(playerPos);
-        }
+            playerPos = EnemyGeneral.Instance.GetPlayer();
 
-        if (ai.state == States.TARGETING)
-        {
             if (observer.LaunchRay())
             {
-                ai.state = States.TARGETING;
+                ai.state = States.ATTACKING;
             }
             else
             {
-                ai.state = States.STOPING;
-                ai.TargetIsMissing(playerPos);
+                ai.TargetIsMissing(playerPos );
             }
         }
     }

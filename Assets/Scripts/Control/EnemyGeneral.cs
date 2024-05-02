@@ -4,10 +4,10 @@ using UnityEngine;
 public class EnemyGeneral : MonoBehaviour
 {
     public static EnemyGeneral Instance;
-    [SerializeField]
-    private List<EnemyTankController> squad = new List<EnemyTankController>();
-    [SerializeField]
-    private TankController player;
+    
+    [SerializeField] private List<EnemyTankController> squad = new List<EnemyTankController>();
+    [SerializeField] private TankController player;
+    
     void Awake()
     {
         if (Instance != null)
