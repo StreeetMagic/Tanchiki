@@ -150,6 +150,7 @@ GameObject:
   - component: {fileID: 3074484844477182016}
   - component: {fileID: 8837373509498249524}
   - component: {fileID: 129302667014870851}
+  - component: {fileID: 2258959851391774618}
   m_Layer: 8
   m_Name: EnemyTank
   m_TagString: Untagged
@@ -295,9 +296,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   state: 0
+  LastPlayerPosition: {fileID: 0}
   aIDestination: {fileID: 8837373509498249524}
   aIPath: {fileID: 3074484844477182016}
-  LastPlayerPosition: {fileID: 0}
+  fire: {fileID: 0}
   isNear: 0
 --- !u!114 &4228815950913544736
 MonoBehaviour:
@@ -405,6 +407,22 @@ MonoBehaviour:
   bezierTangentLength: 0.4
   offset: 0.2
   factor: 0.1
+--- !u!114 &2258959851391774618
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7964650729519549000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 183748dd497aa473a98ff0cd8cb67fc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 1
+  uniqueID: 268611813617169226
+  updateError: 1
+  checkTime: 0.2
 --- !u!1001 &4755341229005954602
 PrefabInstance:
   m_ObjectHideFlags: 0

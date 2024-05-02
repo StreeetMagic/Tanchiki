@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 45417836}
   - component: {fileID: 45417835}
   - component: {fileID: 45417838}
+  - component: {fileID: 45417839}
   m_Layer: 12
   m_Name: crateMetal
   m_TagString: Untagged
@@ -281,6 +282,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &45417839
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 45417834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 183748dd497aa473a98ff0cd8cb67fc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 1
+  uniqueID: 3336999940523243777
+  updateError: 1
+  checkTime: 0.2
 --- !u!1 &51939673
 GameObject:
   m_ObjectHideFlags: 3
@@ -380,6 +397,10 @@ PrefabInstance:
     - target: {fileID: 1795500335506015542, guid: a7341de59512e0f469340ba690b6e8dc, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2258959851391774618, guid: a7341de59512e0f469340ba690b6e8dc, type: 3}
+      propertyPath: uniqueID
+      value: 4480274653139119227
       objectReference: {fileID: 0}
     - target: {fileID: 3241876400768220418, guid: a7341de59512e0f469340ba690b6e8dc, type: 3}
       propertyPath: m_LocalPosition.x
@@ -525,6 +546,7 @@ GameObject:
   m_Component:
   - component: {fileID: 237714672}
   - component: {fileID: 237714671}
+  - component: {fileID: 237714673}
   m_Layer: 0
   m_Name: ASTAR
   m_TagString: Untagged
@@ -546,7 +568,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 1
   data:
-    dataString: UEsDBBQAAAgIAAAgIezHMLAObwIAACoFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFlVMFy2jAQ/RVG58LY4OCht5YQ0gMJE9rJxRchrbEGWfJIcoBk+PeuZBu7lAvy2327b5/W/iJC2QqY02ZtBN9oDuT7iPgz+Tbqg89wpgetduITupx3wV3hk2jIeaNOaMRjT7O6BGcE+6EO0idHCNZK5NqUK36ApbbOIpxTaQFDRjvPVgh9jcgZ/8YLT7ngaZr60yeeFtHoikcGyoHpU6NJHPnfw6xljBFpKQ2jVkzSsgLu5ffEaTJJH7ou0WT6EJIVjtfmRU2caSmFbeURd6nC+LuqAAN+fi4oThskxZPIMwoQh8L5skP6a55bcK0bhl4ehUHfmrrkp27MLKk9NhI/qKx9pziaJkFZU3XzX8I4DuHc6PK5a4yWIOQKwY5v9MKodQO7h/DjQHyw6kTlke4lvBegXvTa6FpxDDpTe2ptYfrYP95mWxbAjj3eSL0D62pwaa3v3d36Ga5h/PNSinIf3E8aYCd1sDysBBi8n18oOCyMbUsg6lX8sfCbHoab1QaehLEOQ+2Uysvb69r4VLIKnvlparfURkGAW9EVKCrdZYtl3P0d3sUGbe8iT9S/Q23zNta9GneUAPf5UXQX2urT7bJsoU8bsMVr7aRQ0Iv2gRf0aamValZs6ElH29Ump2xAO9SC/7taJOGz6WKR5nE6n8X7fTqe05SlLEl4nszTGd+TsHtC4ZxUbhuhrT14a6ovrnDPuk/LaG1oFdadG3pai89SDywXKtc7ZgDUa1PhJhwMNsF3k6+4QIN24JxQ4b7JV0akZkfg2a1QFiZdnZ2hWV8lI5X40M4jGVmGb0lGPHzb5a2BDwEn37wrdiXXv1BLAwQUAAAICAAAICHsnGRAsm0AAAB4AAAACQAkAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAatWKkstKs7Mz1OyUjDRM9IzNNdRUEovSizIKAaKGII4pZkpIHa0kkmKsZGlpXmaobmZsWFSkrmuWaJ5snmyiUlKmomZuXFKklIsUH1JZUGqX2JuKkRPQGJJRlpmXkpmXrqee1FmijvIaKXYWgBQSwECLQAUAAAICAAAICHsxzCwDm8CAAAqBQAACwAkAAAAAAAAAAAAAAAAAAAAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwECLQAUAAAICAAAICHsnGRAsm0AAAB4AAAACQAkAAAAAAAAAAAAAAC8AgAAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BUEsFBgAAAAACAAIAuAAAAHQDAAAAAA==
+    dataString: UEsDBBQAAAgIAAAgIez4h+RFcAIAACkFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFlVE1z2jAQ/SuMzoWx+XLprQVCekjChHZy8UVIa6xBljySHCAZ/ntXso0dygX5vX378bT2JxHKlsCcNhsj+JPmQH4MiD+Tb4OOfIQzPWi1Ex/QxrwJ7nIfREPMK3VCIx57mdUFOCPYT3WQPjhCsFIi06ZY8wMstXUW4YxKC0gZ7bxaIfQ5IGf8Gy685IKnceJPH3haRIMrHhkoB6YLjUZx5H+zSaMYItJIakWlmKRFCdy33wnH01Eya6tEo/EsBCscr4mLap5pKYVt2iPuUobxd2UOBvz8XFCcNrQUjyKvyEEccufT9uUvWWbBNW4YelkJg77VeckvXZtZUHusW3ynsvKV4vH3eow669N/AcM40JnRxWNbGC1ByOWCHV/phVHrenb34VWv+WDVicoj3Ut4y0E9643RleJIOlN5aWVhvOoeb7Mtc2DHDq9bvQOrsndpje/t3foZrmH881KKYh/cn9bATupgeVgJMHg/v7HhsDC2SYGo7+KvhT/00N+shngQxjqkmimVb2+vK+NDyTp45qep3FIbBQFumi5BUekuW0zj7u/wjuuVvWMeqH+HmuIN174ad5IAd/FRdEdt9el2WTbXpyew+UvlpFDQNe2JZ/RpqZWqV8x+Jb1qV5mMsp7qUAn+dbPIlE/Gi0WSxcl8Eu/3yXBOE5aw6ZRn03ky4XsSVk8oHJPKbd1n4w5emuqSK1yz9ssy2Bhahm3nhp424qPQvf6EyvSOGQD1UmdoHbJgsAi+mnzNBfqzA+eECtdNPlMiNTsCT2+J0jDp+uwMTbssKSnFu3YeSckyfEpS4uHbKm8NvAs4+eJtsiu5/gNQSwMEFAAACAgAACAh7JxkQLJtAAAAeAAAAAkAJABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQGrVipLLSrOzM9TslIw0TPSMzTXUVBKL0osyCgGihiCOKWZKSB2tJJJirGRpaV5mqG5mbFhUpK5rlmiebJ5solJSpqJmblxSpJSLFB9SWVBql9ibipET0BiSUZaZl5KZl66nntRZoo7yGil2FoAUEsBAi0AFAAACAgAACAh7PiH5EVwAgAAKQUAAAsAJAAAAAAAAAAAAAAAAAAAAGdyYXBoMC5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BUEsBAi0AFAAACAgAACAh7JxkQLJtAAAAeAAAAAkAJAAAAAAAAAAAAAAAvQIAAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLBQYAAAAAAgACALgAAAB1AwAAAAA=
     upgradeData: 
     file_cachedStartup: {fileID: 0}
     data_cachedStartup: 
@@ -634,6 +656,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &237714673
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 237714670}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd82ff9df2b27774e92f54136dcf8e2f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &432495552
 GameObject:
   m_ObjectHideFlags: 0
@@ -676,6 +710,10 @@ PrefabInstance:
     - target: {fileID: 1795500335506015542, guid: a7341de59512e0f469340ba690b6e8dc, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2258959851391774618, guid: a7341de59512e0f469340ba690b6e8dc, type: 3}
+      propertyPath: uniqueID
+      value: 8257821453979383492
       objectReference: {fileID: 0}
     - target: {fileID: 3241876400768220418, guid: a7341de59512e0f469340ba690b6e8dc, type: 3}
       propertyPath: m_LocalPosition.x
@@ -13763,6 +13801,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 2258959851391774618, guid: a7341de59512e0f469340ba690b6e8dc, type: 3}
+      propertyPath: uniqueID
+      value: 5839591785106098866
+      objectReference: {fileID: 0}
     - target: {fileID: 3241876400768220418, guid: a7341de59512e0f469340ba690b6e8dc, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5.89
@@ -13857,6 +13899,10 @@ PrefabInstance:
     - target: {fileID: 1795500335506015542, guid: a7341de59512e0f469340ba690b6e8dc, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2258959851391774618, guid: a7341de59512e0f469340ba690b6e8dc, type: 3}
+      propertyPath: uniqueID
+      value: 2111414891185037146
       objectReference: {fileID: 0}
     - target: {fileID: 3241876400768220418, guid: a7341de59512e0f469340ba690b6e8dc, type: 3}
       propertyPath: m_LocalPosition.x
@@ -13972,6 +14018,10 @@ PrefabInstance:
     - target: {fileID: 1795500335506015542, guid: a7341de59512e0f469340ba690b6e8dc, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2258959851391774618, guid: a7341de59512e0f469340ba690b6e8dc, type: 3}
+      propertyPath: uniqueID
+      value: 722516595664179132
       objectReference: {fileID: 0}
     - target: {fileID: 3241876400768220418, guid: a7341de59512e0f469340ba690b6e8dc, type: 3}
       propertyPath: m_LocalPosition.x
@@ -14118,6 +14168,10 @@ PrefabInstance:
     - target: {fileID: 1795500335506015542, guid: a7341de59512e0f469340ba690b6e8dc, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2258959851391774618, guid: a7341de59512e0f469340ba690b6e8dc, type: 3}
+      propertyPath: uniqueID
+      value: 3398598986171436930
       objectReference: {fileID: 0}
     - target: {fileID: 3241876400768220418, guid: a7341de59512e0f469340ba690b6e8dc, type: 3}
       propertyPath: m_LocalPosition.x
@@ -14275,6 +14329,10 @@ PrefabInstance:
       propertyPath: health
       value: 
       objectReference: {fileID: 1170829927}
+    - target: {fileID: 6731295401460314600, guid: 8857983060af5c7489661f523e45e200, type: 3}
+      propertyPath: health
+      value: 1000
+      objectReference: {fileID: 0}
     - target: {fileID: 7494315518907025627, guid: 8857983060af5c7489661f523e45e200, type: 3}
       propertyPath: rotationSpeed
       value: 70

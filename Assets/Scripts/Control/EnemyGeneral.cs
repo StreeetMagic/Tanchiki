@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EnemyGeneral : MonoBehaviour
 {
@@ -30,6 +31,12 @@ public class EnemyGeneral : MonoBehaviour
     }
     public Transform GetPlayer()
     {
+        
+        if (player == null)
+        {
+            SceneManager.LoadScene("SampleScene");
+        }
+        
         return player.transform;
     }
 }
